@@ -22,7 +22,7 @@ async function main() {
 
 
  // the following code examples can be pasted here...
- const insertResult = await collection.insertMany([{ a: 1 }, { a: 2 }, { a: 3 }]);
+ const insertResult = await collection.insertMany(data);
  console.log('Inserted documents =>', insertResult);
 
 

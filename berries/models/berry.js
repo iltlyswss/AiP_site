@@ -2,7 +2,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var berrySchema = new Schema({
-    title: String, nick: {
+    title: String,
+    nick: {
         type: String,
         unique: true,
         required: true
