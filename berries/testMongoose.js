@@ -1,13 +1,11 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:27017/testMongoose2024');
 
-var schema = mongoose.Schema({ name: String });
+var Berry = require("./models/berry.js").Berry;
 
-schema.methods.adding = function () {
-    console.log(this.name + " добавлена в базу");
-};
+var berry = new Berry({
+    title: "Вишня",
+    nick: "cherry"
+});
 
-const Berry = mongoose.model('Berry', schema);
-
-const berry = new Berry({ name: 'Вишня' });
-berry.save().then(() => berry.adding());
+berry.save();
