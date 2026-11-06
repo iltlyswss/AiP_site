@@ -1,6 +1,5 @@
 const { MongoClient } = require('mongodb');
-// or as an es module:
-// import { MongoClient } from 'mongodb'
+
 var data = require("./data.js").data;
 console.log(data);
 
@@ -11,7 +10,7 @@ const client = new MongoClient(url);
 
 
 // Database Name
-const dbName = 'test2024';
+const dbName = 'berries';
 
 
 async function main() {
@@ -19,7 +18,7 @@ async function main() {
  await client.connect();
  console.log('Connected successfully to server');
  const db = client.db(dbName);
- const collection = db.collection('documents');
+ const collection = db.collection('berries');
 
 
  // the following code examples can be pasted here...
